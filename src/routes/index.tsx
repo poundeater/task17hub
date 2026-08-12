@@ -732,12 +732,6 @@ function StartHere() {
                     Kinetic Consensus brand kit
                   </A>
                 </li>
-                <li>
-                  <A href={PDF_URL}>View full PDF</A>
-                </li>
-                <li>
-                  <A href={DOCX_URL}>View full DOCX</A>
-                </li>
               </ul>
             </div>
           </section>
