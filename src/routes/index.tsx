@@ -225,14 +225,6 @@ function StartHere() {
             down the page. Everything here is either verified against official docs or marked as
             community-verified.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href={PDF_URL} target="_blank" rel="noreferrer noopener" className={GHOST}>
-              View full PDF
-            </a>
-            <a href={DOCX_URL} target="_blank" rel="noreferrer noopener" className={GHOST}>
-              View full DOCX
-            </a>
-          </div>
         </div>
 
         <div className="mt-10 space-y-6">
