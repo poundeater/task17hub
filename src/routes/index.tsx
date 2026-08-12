@@ -225,14 +225,6 @@ function StartHere() {
             down the page. Everything here is either verified against official docs or marked as
             community-verified.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href={PDF_URL} target="_blank" rel="noreferrer noopener" className={GHOST}>
-              View full PDF
-            </a>
-            <a href={DOCX_URL} target="_blank" rel="noreferrer noopener" className={GHOST}>
-              View full DOCX
-            </a>
-          </div>
         </div>
 
         <div className="mt-10 space-y-6">
@@ -740,12 +732,6 @@ function StartHere() {
                     Kinetic Consensus brand kit
                   </A>
                 </li>
-                <li>
-                  <A href={PDF_URL}>View full PDF</A>
-                </li>
-                <li>
-                  <A href={DOCX_URL}>View full DOCX</A>
-                </li>
               </ul>
             </div>
           </section>
@@ -761,16 +747,69 @@ function StartHere() {
             Redbelly DAO community task board. Content draft TASK-17.
           </p>
           <div className="flex items-center gap-4 text-ink-muted">
-            <span aria-label="GitHub" role="img" className="block hover:text-accent-link">
+            <span
+              aria-label="GitHub"
+              role="img"
+              className="block transition-colors hover:text-accent-link"
+            >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
                 <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.79 0C18.16 4.95 19.13 5.26 19.13 5.26c.63 1.59.23 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
               </svg>
             </span>
-            <span aria-label="dev.to" role="img" className="block hover:text-accent-link">
+            <span
+              aria-label="dev.to"
+              role="img"
+              className="block transition-colors hover:text-accent-link"
+            >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
                 <path d="M2.5 3.5h19A2.5 2.5 0 0 1 24 6v12a2.5 2.5 0 0 1-2.5 2.5h-19A2.5 2.5 0 0 1 0 18V6a2.5 2.5 0 0 1 2.5-2.5Zm2.7 5.06v6.9h1.9c1.42 0 2.3-.86 2.3-2.3v-2.3c0-1.44-.88-2.3-2.3-2.3H5.2Zm1.55 1.5h.35c.5 0 .75.28.75.8v2.3c0 .52-.25.8-.75.8h-.35v-3.9Zm4.2-1.5 1.6 6.9h1.6l1.6-6.9h-1.6l-.8 4.3-.8-4.3h-1.6Zm6.2 0v6.9h3.6v-1.5h-2.05v-1.2h1.8v-1.5h-1.8v-1.2h2.05V8.56h-3.6Z" />
               </svg>
             </span>
+            <a
+              href={PDF_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="View full PDF"
+              className="block transition-colors hover:text-accent-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+                aria-hidden="true"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M8.5 13h7" />
+                <path d="M8.5 16.5h7" />
+              </svg>
+            </a>
+            <a
+              href={DOCX_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="View full DOCX"
+              className="block transition-colors hover:text-accent-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+                aria-hidden="true"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M8.5 14l1.2 4 1.3-3 1.3 3 1.2-4" />
+              </svg>
+            </a>
           </div>
         </div>
       </footer>
