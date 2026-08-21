@@ -82,6 +82,34 @@ function Note({ children }: { children: React.ReactNode }) {
   );
 }
 
+function ThemeToggle() {
+  const [isDark, setIsDark] = React.useState(true);
+
+  React.useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  function toggle() {
+    const next = !isDark;
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch (e) {}
+    setIsDark(next);
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      className="inline-flex h-9 w-9 items-center justify-center rounded border border-border bg-card text-ink transition-colors hover:border-accent-link hover:text-accent-link"
+    >
+      {isDark ? <Moon size={18} /> : <Sun size={18} />}
+    </button>
+  );
+}
+
 function KeyValue({
   label,
   rows,
