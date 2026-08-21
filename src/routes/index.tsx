@@ -809,7 +809,12 @@ function StartHere() {
       <footer className="border-t border-hairline">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-4 py-8 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto" />
+            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto dark:hidden" />
+            <img
+              src={logoDark}
+              alt="Redbelly DAO"
+              className="hidden h-8 w-auto dark:block"
+            />
           </a>
           <p className="text-center text-sm text-ink-muted">
             Redbelly DAO community task board. Content draft TASK-17.
