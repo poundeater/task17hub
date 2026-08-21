@@ -236,10 +236,10 @@ function StartHere() {
             aria-labelledby="scam-warning-title"
           >
             <header className="flex flex-wrap items-baseline gap-x-3 bg-primary/15 px-5 py-4 sm:px-6">
-              <span className="font-mono text-xs text-accent-link">01</span>
+              <span className="font-mono text-xs text-foreground">01</span>
               <h2
                 id="scam-warning-title"
-                className="text-xl font-semibold text-accent-link sm:text-2xl"
+                className="text-xl font-semibold text-foreground sm:text-2xl"
               >
                 Scam warning
               </h2>
@@ -681,7 +681,7 @@ function StartHere() {
               href="https://www.reddex.io/stake"
               target="_blank"
               rel="noreferrer noopener"
-              className={`mt-5 ${GHOST}`}
+              className="mt-5 inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
             >
               Stake on Reddex
             </a>
@@ -770,7 +770,7 @@ function StartHere() {
       </main>
 
       <footer className="border-t border-hairline">
-        <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-4 py-8 sm:flex-row sm:justify-center sm:px-16">
+        <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-4 py-8 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
             <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto" />
           </a>
