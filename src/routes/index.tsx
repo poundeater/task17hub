@@ -1,5 +1,6 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Moon, Sun } from "lucide-react";
 import logo from "@/assets/dao-logo-on-light.png";
 import logoDark from "@/assets/dao-logo-on-dark.png";
 
@@ -78,6 +79,34 @@ function A({ href, children }: { href: string; children: React.ReactNode }) {
 function Note({ children }: { children: React.ReactNode }) {
   return (
     <p className="mt-4 border-t border-hairline pt-3 text-sm text-ink-muted">{children}</p>
+  );
+}
+
+function ThemeToggle() {
+  const [isDark, setIsDark] = React.useState(true);
+
+  React.useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  function toggle() {
+    const next = !isDark;
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch (e) {}
+    setIsDark(next);
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      className="inline-flex h-9 w-9 items-center justify-center rounded border border-border bg-card text-ink transition-colors hover:border-accent-link hover:text-accent-link"
+    >
+      {isDark ? <Moon size={18} /> : <Sun size={18} />}
+    </button>
   );
 }
 
@@ -204,14 +233,22 @@ function StartHere() {
       <header className="sticky top-0 z-10 border-b border-hairline bg-background/80 backdrop-blur-[16px]">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto sm:h-9" />
+            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto sm:h-9 dark:hidden" />
+            <img
+              src={logoDark}
+              alt="Redbelly DAO"
+              className="hidden h-8 w-auto sm:h-9 dark:block"
+            />
           </a>
-          <a
-            href="#scam-warning"
-            className="rounded border border-border px-3 py-1.5 text-sm text-ink-2 hover:text-ink"
-          >
-            Start Here
-          </a>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              href="#scam-warning"
+              className="rounded border border-border px-3 py-1.5 text-sm text-ink-2 hover:text-ink"
+            >
+              Start Here
+            </a>
+          </div>
         </div>
       </header>
 
@@ -772,7 +809,12 @@ function StartHere() {
       <footer className="border-t border-hairline">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-6 px-4 py-8 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto" />
+            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto dark:hidden" />
+            <img
+              src={logoDark}
+              alt="Redbelly DAO"
+              className="hidden h-8 w-auto dark:block"
+            />
           </a>
           <p className="text-center text-sm text-ink-muted">
             Redbelly DAO community task board. Content draft TASK-17.
