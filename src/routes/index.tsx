@@ -233,14 +233,22 @@ function StartHere() {
       <header className="sticky top-0 z-10 border-b border-hairline bg-background/80 backdrop-blur-[16px]">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto sm:h-9" />
+            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto sm:h-9 dark:hidden" />
+            <img
+              src={logoDark}
+              alt="Redbelly DAO"
+              className="hidden h-8 w-auto sm:h-9 dark:block"
+            />
           </a>
-          <a
-            href="#scam-warning"
-            className="rounded border border-border px-3 py-1.5 text-sm text-ink-2 hover:text-ink"
-          >
-            Start Here
-          </a>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              href="#scam-warning"
+              className="rounded border border-border px-3 py-1.5 text-sm text-ink-2 hover:text-ink"
+            >
+              Start Here
+            </a>
+          </div>
         </div>
       </header>
 
