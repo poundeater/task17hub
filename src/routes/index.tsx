@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/dao-logo-on-light.png";
+import logoDark from "@/assets/dao-logo-on-dark.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,9 +27,9 @@ export const Route = createFileRoute("/")({
 
 const TASKBOARD = "https://redbelly-dao-taskboard.vercel.app/login";
 const PDF_URL =
-  "https://cdn.jsdelivr.net/gh/fo8ball-dot/soft-shadows@main/public/TASK-17-content-draft.pdf";
+  "https://cdn.jsdelivr.net/gh/poundeater/task17hub@main/public/TASK-17-content-draft.pdf";
 const DOCX_URL =
-  "https://docs.google.com/gview?url=https://raw.githubusercontent.com/fo8ball-dot/soft-shadows/main/public/TASK-17-content-draft.docx&embedded=true";
+  "https://docs.google.com/gview?url=https://raw.githubusercontent.com/poundeater/task17hub/main/public/TASK-17-content-draft.docx&embedded=true";
 
 function Card({
   id,
@@ -203,7 +204,7 @@ function StartHere() {
       <header className="sticky top-0 z-10 border-b border-hairline bg-background/80 backdrop-blur-[16px]">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto sm:h-9" />
+            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto sm:h-9" />
           </a>
           <a
             href="#scam-warning"
@@ -231,7 +232,7 @@ function StartHere() {
           {/* 1. Scam warning */}
           <section
             id="scam-warning"
-            className="rounded-lg border border-border bg-card scroll-mt-20"
+            className="rounded-lg border-2 border-primary bg-primary/5 scroll-mt-20"
             aria-labelledby="scam-warning-title"
           >
             <header className="flex flex-wrap items-baseline gap-x-3 px-5 py-4 sm:px-6">
@@ -239,7 +240,7 @@ function StartHere() {
               <h2 id="scam-warning-title" className="text-xl font-semibold sm:text-2xl">
                 Scam warning
               </h2>
-              <span className="rounded bg-[#fef3c7] px-2 py-0.5 text-xs font-semibold text-warn">
+              <span className="rounded bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">
                 Read first
               </span>
             </header>
@@ -741,7 +742,7 @@ function StartHere() {
       <footer className="border-t border-hairline">
         <div className="mx-auto flex max-w-[1280px] flex-col gap-6 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-16">
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
-            <img src={logo} alt="Redbelly DAO" className="h-8 w-auto" />
+            <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto" />
           </a>
           <p className="text-sm text-ink-muted">
             Redbelly DAO community task board. Content draft TASK-17.
