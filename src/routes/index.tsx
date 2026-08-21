@@ -232,19 +232,22 @@ function StartHere() {
           {/* 1. Scam warning */}
           <section
             id="scam-warning"
-            className="rounded-lg border-2 border-primary bg-primary/5 scroll-mt-20"
+            className="overflow-hidden rounded-lg border-2 border-primary bg-primary/5 scroll-mt-20"
             aria-labelledby="scam-warning-title"
           >
-            <header className="flex flex-wrap items-baseline gap-x-3 px-5 py-4 sm:px-6">
-              <span className="font-mono text-xs text-ink-muted">01</span>
-              <h2 id="scam-warning-title" className="text-xl font-semibold sm:text-2xl">
+            <header className="flex flex-wrap items-baseline gap-x-3 bg-primary/15 px-5 py-4 sm:px-6">
+              <span className="font-mono text-xs text-accent-link">01</span>
+              <h2
+                id="scam-warning-title"
+                className="text-xl font-semibold text-accent-link sm:text-2xl"
+              >
                 Scam warning
               </h2>
               <span className="rounded bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">
                 Read first
               </span>
             </header>
-            <div className="border-t border-border px-5 py-5 sm:px-6 sm:py-6">
+            <div className="border-t border-primary/30 px-5 py-5 sm:px-6 sm:py-6">
               <p className="max-w-[70ch] text-ink-2">
                 Redbelly staff, moderators, and official support will never DM you first. Any
                 direct message claiming to be from Redbelly staff, offering support, or announcing
@@ -273,6 +276,33 @@ function StartHere() {
               </p>
             </div>
           </section>
+
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={PDF_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+            >
+              Read PDF
+            </a>
+            <a
+              href={DOCX_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+            >
+              Read Docs
+            </a>
+            <a
+              href="https://dev.to/poundeater/building-the-redbelly-dao-start-here-onboarding-hub-2nb5"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+            >
+              Read Article
+            </a>
+          </div>
 
           {/* 2. KYC */}
           <Card id="kyc" step="02" title="KYC" kicker="Required for native RBNT and mainnet">
