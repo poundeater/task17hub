@@ -774,7 +774,7 @@ function StartHere() {
           <a href={TASKBOARD} aria-label="Redbelly DAO task board">
             <img src={logoDark} alt="Redbelly DAO" className="h-8 w-auto" />
           </a>
-          <p className="text-sm text-ink-muted">
+          <p className="text-center text-sm text-ink-muted">
             Redbelly DAO community task board. Content draft TASK-17.
           </p>
           <div className="flex items-center gap-4 text-ink-muted">
