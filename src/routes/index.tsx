@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/dao-logo-on-light.png";
+import logoDark from "@/assets/dao-logo-on-dark.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,9 +27,9 @@ export const Route = createFileRoute("/")({
 
 const TASKBOARD = "https://redbelly-dao-taskboard.vercel.app/login";
 const PDF_URL =
-  "https://cdn.jsdelivr.net/gh/fo8ball-dot/soft-shadows@main/public/TASK-17-content-draft.pdf";
+  "https://cdn.jsdelivr.net/gh/poundeater/task17hub@main/public/TASK-17-content-draft.pdf";
 const DOCX_URL =
-  "https://docs.google.com/gview?url=https://raw.githubusercontent.com/fo8ball-dot/soft-shadows/main/public/TASK-17-content-draft.docx&embedded=true";
+  "https://docs.google.com/gview?url=https://raw.githubusercontent.com/poundeater/task17hub/main/public/TASK-17-content-draft.docx&embedded=true";
 
 function Card({
   id,
