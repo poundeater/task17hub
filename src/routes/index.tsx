@@ -1,5 +1,6 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Moon, Sun } from "lucide-react";
 import logo from "@/assets/dao-logo-on-light.png";
 import logoDark from "@/assets/dao-logo-on-dark.png";
 
